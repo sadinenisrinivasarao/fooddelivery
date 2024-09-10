@@ -10,7 +10,7 @@ const app = express();
 
 app.use(express.json());
 app.use(cors({
-    origin: ["https://deploy-food-delivery-page.vercel.app"],
+    origin: ["https://food-delivery-api-tau.vercel.app/"],
     methods: ['POST', 'GET'],
     credentials: true
 }));
