@@ -9,8 +9,13 @@ import cartRouter from "./routes/CartRoute.js";
 const app = express();
 const port = 3000;
 
+
 app.use(express.json())
-app.use(cors())
+app.use(cors({
+    origin: ["https://deploy-food-delivery-page.vercal.app"],
+    methods: ['POST', 'GET'],
+    credentials: true
+}))
 
 connectDB();
 
