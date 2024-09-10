@@ -6,31 +6,27 @@ import Cart from './Pages/Cart/Cart'
 import PlaceOrder from './Pages/PlaceOrder/PlaceOrder'
 import StoreContextProvider from './Context/StoreContext'
 import Login from './Components/Login/Login'
+
 const App = () => {
   const [showLogin, setShowLogin] = useState(false);
+  
   return (
     <div className='app'>
-      
-      
       <BrowserRouter>
-      
-      <StoreContextProvider >
-      {showLogin?<Login setShowLogin={setShowLogin}/>:<></>}
-      <Navbar setShowLogin={setShowLogin}/>
-      <Routes>
-        <Route path="/" element={<Home/>}/>
-        <Route path="/home" element={<Home/>} />
-        <Route path="/cart" element={<Cart/>}>
-        <Route path="/cart/home" element={<Home/>}/>
-        </Route>
-        <Route path="/order" element={<PlaceOrder/>} />
-        
-      </Routes>
-      </StoreContextProvider>
+        <StoreContextProvider>
+          {showLogin ? <Login setShowLogin={setShowLogin} /> : <></>}
+          <Navbar setShowLogin={setShowLogin} />
+          
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/home" element={<Home />} />
+            <Route path="/cart" element={<Cart />} />
+            <Route path="/order" element={<PlaceOrder />} />
+          </Routes>
+        </StoreContextProvider>
       </BrowserRouter>
-      
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
