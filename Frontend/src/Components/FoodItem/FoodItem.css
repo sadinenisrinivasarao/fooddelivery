@@ -1,0 +1,68 @@
+.food-item {
+    position: relative; /* Ensure children are positioned relative to this container */
+    width: 100%;
+    margin: auto;
+    border-radius: 30px;
+    box-shadow: 0px 0px 20px #00000015;
+    transition: 0.3s;
+    animation: fadeIn 1s;
+}
+
+.food-item:hover {
+    transform: scale(1.05);
+}
+
+.item-image {
+    width: 100%;
+    border-radius: 15px 15px 0px 0px;
+    position: relative; /* Ensure this is also relative for absolute positioning of child elements */
+}
+
+.item-info {
+    padding: 20px;
+}
+
+.item-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.item-name {
+    font-weight: 800;
+    font-size: 20px;
+}
+
+.item-desc {
+    font-size: 14px;
+    color: #84898e;
+}
+
+.item-price {
+    margin-top: 15px;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.item-count-icons {
+    position: absolute;
+    bottom: 10px; /* Adjust as needed */
+    right: 10px; /* Adjust as needed */
+    cursor: pointer;
+}
+
+.item-counter {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    background-color: #ffffff;
+    border-radius: 50px;
+    padding: 6px;
+}
+
+.white_add_icon {
+    width: 40px;
+}

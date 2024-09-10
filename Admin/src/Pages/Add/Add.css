@@ -1,0 +1,49 @@
+.admin-add {
+    color: #5c5d5e;
+}
+
+form.admin-flex-col {
+    padding: 2vw 5vw;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2vw;
+}
+
+.admin-image-upload img {
+    cursor: pointer;
+}
+
+.admin-add-product-name input {
+    height: 28px;
+    width: 22vw;
+}
+
+.admin-add-product-disc textarea {
+    height: 6vw;
+    width: 22vw;
+}
+
+.admin-add-category-price {
+    display: flex;
+    gap: 2.5vw;
+}
+
+.admin-add-category select,
+.admin-add-price input {
+    max-width: 120px;
+    padding: 5px;
+}
+
+.admin-add-btn {
+    font-weight: 500;
+    color: white;
+    padding: 0.5vw;
+    width: 8vw;
+    font-size: 15px;
+    background: #4d4d97;
+    cursor: pointer;
+}
+
+.admin-image-upload img {
+    width: 10vw;
+}

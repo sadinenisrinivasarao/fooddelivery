@@ -1,0 +1,85 @@
+.login-popup {
+    position: absolute;
+    z-index: 1;
+    width: 80%;
+    height: 100%;
+    background-color: #00000090;
+    display: grid;
+}
+
+.login-container {
+    place-self: center;
+    width: max(23vw, 330px);
+    color: #808080;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding: 25px 30px;
+    border-radius: 10px;
+    animation: fadeIn 0.5s;
+}
+
+.login-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: black;
+}
+
+.login-title img {
+    width: 30px;
+    cursor: pointer;
+    padding: 2px;
+    border: 1px solid black;
+    border-radius: 50%;
+}
+
+.login-signup {
+    color: tomato;
+    cursor: pointer;
+}
+
+.login-popuo-condition {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.login-container #checkbox {
+    width: 15px;
+    cursor: pointer;
+}
+
+.login-title h2 {
+    color: tomato;
+}
+
+.login-inputs {
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+
+}
+
+.login-inputs input,
+.login-inputs button {
+    border-radius: 10px;
+    height: 40px;
+    border: 1px solid red;
+
+}
+
+.login-inputs input::placeholder {
+    font-size: 17px;
+    text-align: center;
+}
+
+.login-inputs button {
+    background: tomato;
+    color: white;
+    font-size: 17px;
+    width: 74%;
+    margin-left: 13%;
+    cursor: pointer;
+}
