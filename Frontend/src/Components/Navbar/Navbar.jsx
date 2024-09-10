@@ -7,6 +7,9 @@ import { StoreContext } from '../../Context/StoreContext';
 const Navbar = ({setShowLogin}) => {
     const navigate = useNavigate();
     
+   
+    const [menu, setMenu] = useState("Home");
+    const {getTotalCartAmount , token, setToken} = useContext(StoreContext);
     const logOut =() =>{
         navigate('/');
 
@@ -15,8 +18,6 @@ const Navbar = ({setShowLogin}) => {
         
 
     }
-    const [menu, setMenu] = useState("Home");
-    const {getTotalCartAmount , token, setToken} = useContext(StoreContext);
     if (document.querySelector('.empty-cart')) {
         setToken("")
     }
