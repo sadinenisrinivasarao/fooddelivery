@@ -6,9 +6,7 @@ import { StoreContext } from '../../Context/StoreContext';
 
 const Navbar = ({setShowLogin}) => {
     const navigate = useNavigate();
-    if (document.querySelector('.empty-cart')) {
-        setToken("")
-    }
+    
     const logOut =() =>{
         navigate('/');
 
@@ -19,6 +17,9 @@ const Navbar = ({setShowLogin}) => {
     }
     const [menu, setMenu] = useState("Home");
     const {getTotalCartAmount , token, setToken} = useContext(StoreContext);
+    if (document.querySelector('.empty-cart')) {
+        setToken("")
+    }
     return (
         <div className='Navbar'>
             <div>
@@ -26,7 +27,7 @@ const Navbar = ({setShowLogin}) => {
             </div>
             <div>
                 <ul className="navbar-menu">
-                    <Link to='/'><li onClick={() => setMenu("Home")} className={menu === "Home" ? "active" : ""}>Home</li></Link>
+                    <Link to='/home'><li onClick={() => setMenu("Home")} className={menu === "Home" ? "active" : ""}>Home</li></Link>
                     <a href='#explore-menu' onClick={() => setMenu("Menu")} className={menu === "Menu" ? "active" : ""}>Menu</a>
                 </ul>
             </div>
