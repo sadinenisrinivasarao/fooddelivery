@@ -15,6 +15,7 @@ app.use(cors({
         "https://fooddelivery-frontend.vercel.app",
         "https://fooddelivery-adminpage.vercel.app",
         "https://food-delivery-api-tau.vercel.app"
+
     ],
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     credentials: true,
