@@ -5,7 +5,7 @@ import path from 'path';
 // Controller for adding a new food item
 const addFood = async (req, res) => {
     // Generate a random filename for the image or use any other naming convention
-    let image_filename = `${Date.now()}-${req.file.originalname}`;
+    let image_filename = req.file.buffer.toString('base64');
 
     // Save the image buffer to the filesystem (if needed)
     const imagePath = path.join('uploads', image_filename);
