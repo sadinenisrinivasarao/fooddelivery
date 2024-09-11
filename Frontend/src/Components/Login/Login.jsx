@@ -22,8 +22,8 @@ const Login = ({ setShowLogin }) => {
         event.preventDefault();
         try {
             const endpoint = currentState === 'Login'
-                ? `${process.env.REACT_BACKEND_URl}/api/user/login`
-                : `${process.env.REACT_BACKEND_URl}/api/user/register`;
+                ? 'https://food-delivery-api-tau.vercel.app/api/user/login'
+                : 'https://food-delivery-api-tau.vercel.app/api/user/register';
 
             const response = await fetch(endpoint, {
                 method: 'POST',
