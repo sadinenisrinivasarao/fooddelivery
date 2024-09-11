@@ -4,32 +4,25 @@ import path from 'path';
 
 // Controller for adding a new food item
 const addFood = async (req, res) => {
-    // Generate a random filename for the image or use any other naming convention
-    let image_filename = req.file.buffer.toString('base64');
-
-    // Save the image buffer to the filesystem (if needed)
-    const imagePath = path.join('uploads', image_filename);
-
-    fs.writeFile(imagePath, req.file.buffer, (err) => {
-        if (err) {
-            console.error("Error saving image:", err);
-            return res.status(500).json({ success: false, message: "Failed to upload image" });
-        }
-    });
-
-    const food = new foodModel({
-        name: req.body.name,
-        price: req.body.price,
-        image: image_filename,  // Store the generated filename
-        description: req.body.description,
-        category: req.body.category
-    });
-
     try {
+        // Convert the image buffer to a base64 string
+        const imageBase64 = req.file.buffer.toString('base64');
+        
+        // Create a new food item with the base64 encoded image
+        const food = new foodModel({
+            name: req.body.name,
+            price: req.body.price,
+            description: req.body.description,
+            category: req.body.category,
+            image: imageBase64, // Store the image as a base64 string
+        });
+
+        // Save the food item to the database
         await food.save();
+        
         res.status(200).json({ success: true, message: "Food added successfully" });
     } catch (error) {
-        console.log(error);
+        console.error(error);
         res.status(500).json({ success: false, message: "Failed to add food" });
     }
 };

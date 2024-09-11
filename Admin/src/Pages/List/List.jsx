@@ -54,7 +54,7 @@ const List = () => {
                 <div className="list-table">
                     {list.map((item) => (
                         <div key={item._id} className="list-item">
-                            <img src={`https://food-delivery-api-tau.vercel.app/images/${item.image}`} alt={item.name} className="list-item-image" />
+                            <img src={`data:image/jpeg;base64,${food.image}`} alt={item.name} className="list-item-image" />
                             <p className="list-item-name">{item.name}</p>
                             <p className="list-item-category">{item.category}</p>
                             <p className="list-item-description">{item.description}</p>
