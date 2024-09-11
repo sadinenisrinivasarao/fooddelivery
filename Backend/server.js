@@ -11,10 +11,13 @@ const app = express();
 // Middleware
 app.use(express.json());
 app.use(cors({
-    origin: ["https://fooddelivery-frontend.vercel.app", "https://fooddelivery-adminpage.vercel.app"],
+    origin: ["https://fooddelivery-frontend.vercel.app",
+        "https://fooddelivery-adminpage.vercel.app",
+        "https://food-delivery-api-tau.vercel.app"
+    ],
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     credentials: true,
-    optionsSuccessStatus: 200 
+    optionsSuccessStatus: 200
 }));
 
 // Connect to the database
