@@ -1,6 +1,6 @@
 import express from "express";
 import cors from "cors";
-import connectDB from "./config/db.js"; // Adjust the import for default export
+import connectDB from "./config/db.js";
 import foodRouter from "./routes/foodRoute.js";
 import UserRouter from "./routes/UserRoute.js";
 import CartRouter from "./routes/CartRoute.js";
@@ -12,8 +12,8 @@ const app = express();
 app.use(express.json());
 app.use(cors({
     origin: [
-        "https://your-frontend-project.vercel.app",
-        "https://your-admin-project.vercel.app"
+        "https://fooddelivery-userpage.vercel.app",
+        "https://fooddelivery-adminpage.vercel.app"
     ],
     methods: ['POST', 'GET'],
     credentials: true
