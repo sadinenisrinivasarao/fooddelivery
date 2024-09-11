@@ -18,7 +18,7 @@ const StoreContextProvider = (props) => {
 
         // Update the cart in the database if the token is available
         if (token) {
-            await axios.post(`${import.meta.env.BASE_URL}/api/cart/add`, { itemId }, {
+            await axios.post(`${process.env.REACT_BACKEND_URl}/api/cart/add`, { itemId }, {
                 headers: { token }
             });
         }
@@ -46,7 +46,7 @@ const StoreContextProvider = (props) => {
     // Load cart data from the database
     const loadCartData = async (token) => {
         try {
-            const response = await axios.post(`${import.meta.env.BASE_URL}/api/cart/get`, {itemId}, {
+            const response = await axios.post(`${process.env.REACT_BACKEND_URl}/api/cart/get`, {itemId}, {
                 headers: { token }
             });
             // Set the cart items retrieved from the database

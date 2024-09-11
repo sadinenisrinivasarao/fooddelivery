@@ -22,8 +22,8 @@ const Login = ({ setShowLogin }) => {
         event.preventDefault();
         try {
             const endpoint = currentState === 'Login'
-                ? `${import.meta.env.BASE_URL}/api/user/login`
-                : `${import.meta.env.BASE_URL}/api/user/register`;
+                ? `${process.env.REACT_BACKEND_URl}/api/user/login`
+                : `${process.env.REACT_BACKEND_URl}/api/user/register`;
 
             const response = await fetch(endpoint, {
                 method: 'POST',

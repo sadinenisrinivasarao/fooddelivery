@@ -27,7 +27,7 @@ const Add = () => {
         formData.append('category' ,data.category);
         formData.append('image', image);
         
-            const response = await axios.post(`${import.meta.env.BASE_URL}/api/food/add`, formData)
+            const response = await axios.post(`${process.env.REACT_BACKEND_URl}/api/food/add`, formData)
                 if(response.data.success){
                     alert("Successfully added to database")
                     setData({

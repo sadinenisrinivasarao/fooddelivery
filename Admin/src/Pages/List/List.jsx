@@ -7,7 +7,7 @@ const List = () => {
 
     const fetchList = async () => {
         try {
-            const response = await axios.get(`${import.meta.env.BASE_URL}/api/food/list`);
+            const response = await axios.get(`${process.env.REACT_BACKEND_URl}/api/food/list`);
             if (response.data.success) {
                 setList(response.data.data);
                 // console.log(response.data.data);
@@ -21,7 +21,7 @@ const List = () => {
 
     const removeFood = async (foodId) => {
         try {
-            const response = await axios.post(`${import.meta.env.BASE_URL}/api/food/remove`, { id: foodId });
+            const response = await axios.post(`${process.env.REACT_BACKEND_URl}/api/food/remove`, { id: foodId });
 
             if (response.data.success) {
                 console.log(response.data)
@@ -54,7 +54,7 @@ const List = () => {
                 <div className="list-table">
                     {list.map((item) => (
                         <div key={item._id} className="list-item">
-                            <img src={`${import.meta.env.BASE_URL}/images/${item.image}`} alt={item.name} className="list-item-image" />
+                            <img src={`${process.env.REACT_BACKEND_URl}/images/${item.image}`} alt={item.name} className="list-item-image" />
                             <p className="list-item-name">{item.name}</p>
                             <p className="list-item-category">{item.category}</p>
                             <p className="list-item-description">{item.description}</p>
