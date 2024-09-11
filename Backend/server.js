@@ -11,7 +11,10 @@ const app = express();
 // Middleware
 app.use(express.json());
 app.use(cors({
-    origin: ["https://deploy-food-delivery-page.vercel.app"],
+    origin: [
+        "https://your-frontend-project.vercel.app",
+        "https://your-admin-project.vercel.app"
+    ],
     methods: ['POST', 'GET'],
     credentials: true
 }));
