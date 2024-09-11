@@ -12,7 +12,7 @@ const List = () => {
                 setList(response.data.data);
                 // console.log(response.data.data);
             } else {
-                console.log(response.data.message);
+                console.log(response.data.message); 
             }
         } catch (error) {
             console.error("Error fetching data:", error);

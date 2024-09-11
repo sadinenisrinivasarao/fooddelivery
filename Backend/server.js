@@ -12,7 +12,7 @@ const app = express();
 app.use(express.json());
 app.use(cors({
     origin: [
-        "https://fooddelivery-userpage.vercel.app",
+        "https://fooddelivery-frontend.vercel.app",
         "https://fooddelivery-adminpage.vercel.app"
     ],
     methods: ['POST', 'GET'],
