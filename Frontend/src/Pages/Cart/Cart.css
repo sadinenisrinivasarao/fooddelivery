@@ -10,6 +10,38 @@
     font-size: max(1vw, 12px);
 }
 
+.cart-total {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.cart-total-details {
+    display: flex;
+    justify-content: space-between;
+    color: #555;
+    margin: 4%;
+}
+
+@media screen and (max-width: 750px) {
+
+    .cart-total {
+        width: 90%;
+    }
+
+}
+
+.cart-total button {
+    border: none;
+    color: white;
+    background-color: tomato;
+    width: max(15vw, 200px);
+    padding: 12px 0px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
 .cart-item-title {
     margin: 10px 0px;
     color: black;
