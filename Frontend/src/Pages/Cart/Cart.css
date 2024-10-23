@@ -14,7 +14,7 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 2px;
+    gap: 10px;
 }
 
 .cart-total-details {
@@ -63,12 +63,12 @@
     width: 40%;
 }
 
-.cart-total {
+/* .cart-total {
     width: 40%;
     display: flex;
     flex-direction: column;
     gap: 2px;
-}
+} */
 
 .cart-total-details {
     display: flex;
